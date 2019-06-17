@@ -1,0 +1,21 @@
+{
+  "name": "website-change-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Juanma Menendez",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "slack-notify": "^0.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
