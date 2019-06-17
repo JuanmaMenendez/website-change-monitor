@@ -1,5 +1,5 @@
 
- <img align="center" src="https://github.com/JuanmaMenendez/Website-Change-Monitor/raw/master/logo.png" alt="Website Change Monitor" width="300px">
+ <img align="center" src="https://raw.githubusercontent.com/JuanmaMenendez/website-change-monitor/master/public/logo.png" alt="Website Change Monitor" width="300px">
  <h1 align="center"> Website Change Monitor </h1>
 
 <h3 align="center"> A small web app written in Node.js to monitor specific changes on a web page</h3>
@@ -37,7 +37,7 @@
 
 <br /> 
 
-##How it works
+## How it works
 
 The App request the `urlToCheck` every `checkingFrecuency` and if any of the `elementsToSearchFor` are detected, a notification is sent to your Slack channel and all the `emailsToAlert` list.
 
