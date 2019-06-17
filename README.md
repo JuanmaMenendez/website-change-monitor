@@ -47,11 +47,11 @@ The App request the `urlToCheck` every `checkingFrecuency` and if any of the `el
 
 ## Installation
 
-1. Clone this repo `git clone https://github.com/JuanmaMenendez/Website-Change-Monitor.git`
+1. Clone this repo `git clone https://github.com/JuanmaMenendez/website-change-monitor.git`
 
 2. `npm install`
 
-3. In *server.js*, edit the "Main configuration variables" 
+3. In *server.js*, edit the *"Main configuration variables"* 
     ```
     urlToCheck = "http://urlyouwant.com/tocheck";
     elementsToSearchFor = ['Text you want to watch for', 'imageYouWantToCheckItsExistence.png'];
