@@ -1,5 +1,7 @@
-
- <img align="center" src="https://raw.githubusercontent.com/JuanmaMenendez/website-change-monitor/master/public/logo.png" alt="Website Change Monitor" width="300px">
+<p align="center">
+ <img src="https://raw.githubusercontent.com/JuanmaMenendez/website-change-monitor/master/public/logo.png" alt="Website Change Monitor" width="300px">
+</p>
+ 
  <h1 align="center"> Website Change Monitor </h1>
 
 <h3 align="center"> A small web app written in Node.js to monitor specific changes on a web page</h3>
