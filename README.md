@@ -49,7 +49,7 @@ The App request the `urlToCheck` every `checkingFrecuency` and if any of the `el
 
 1. Clone this repo `git clone https://github.com/JuanmaMenendez/website-change-monitor.git`
 
-2. `npm install`
+2. Inside the "website-change-monitor" folder run the command `npm install`
 
 3. In *server.js*, edit the *"Main configuration variables"* 
     ```
