@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 //Main configuration variables
 const urlToCheck = `http://urlyouwant.com/tocheck`;
 const elementsToSearchFor = ['Text you want to watch for', 'imageYouWantToCheckItsExistence.png'];
-const checkingFrecuency = 5 * 60000; //first number represent the checkingFrecuency in minutes
+const checkingFrequency = 5 * 60000; //first number represent the checkingFrequency in minutes
 
 //Slack Integration
 const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX';
@@ -27,7 +27,7 @@ const emailFrom = 'aaa@aaa.com';
 const emailsToAlert = ['emailOneToSend@theAlert.com', 'emailTwoToSend@theAlert.com'];
 
 
-const checkingNumberBeforeWorkingOKEmail = 1440 / (checkingFrecuency / 60000);   //1 day = 1440 minutes
+const checkingNumberBeforeWorkingOKEmail = 1440 / (checkingFrequency / 60000);   //1 day = 1440 minutes
 let requestCounter = 0;
 
 
@@ -94,7 +94,7 @@ const intervalId = setInterval(function () {
             .catch((emailError)=>{console.log(emailError);});
     }
 
-}, checkingFrecuency);
+}, checkingFrequency);
 
 
 //Index page render

@@ -41,7 +41,7 @@
 
 ## How it works
 
-The App request the `urlToCheck` every `checkingFrecuency` and if any of the `elementsToSearchFor` are detected, a notification is sent to your Slack channel and all the `emailsToAlert` list.
+The App request the `urlToCheck` every `checkingFrequency` and if any of the `elementsToSearchFor` are detected, a notification is sent to your Slack channel and all the `emailsToAlert` list.
 
 <br />
 
@@ -55,7 +55,7 @@ The App request the `urlToCheck` every `checkingFrecuency` and if any of the `el
     ```
     urlToCheck = "http://urlyouwant.com/tocheck";
     elementsToSearchFor = ['Text you want to watch for', 'imageYouWantToCheckItsExistence.png'];
-    checkingFrecuency = 5 * 60000;  //5 minutes
+    checkingFrequency = 5 * 60000;  //5 minutes
     ```
 
 4. **Slack** Integration
