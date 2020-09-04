@@ -31,7 +31,9 @@
 
 *  Email alert notification (with [SendGrid](https://sendgrid.com/))
  
-*  Slack alert notification 
+*  Slack alert notification
+
+*  Discord alert notification 
 
 *  Daily email to confirm that the app is working
 
@@ -62,17 +64,30 @@ The App request the `urlToCheck` every `checkingFrequency` and if any of the `el
 
    4.1 Activate the [WebHooks in your WorkSpace](https://api.slack.com/incoming-webhooks) and get the corresponding 'WebHook URL'  
    
-   4.2 In *server.js*, set the 'WebHook URL' in `SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX';`  
+   4.2 In *server.js*, set the 'WebHook URL' in `SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX';`
 
-5. **SendGrid** Email Integration
+5. **Discord** Integration
 
-    5.1 Create a [SendGrid Free Account](https://sendgrid.com/pricing/)
+   5.1 First you need to create a webhook in a text channel. We're assuming you have both `Manage Channel` and `Manage Webhooks` permissions!
+
+      - Go in a channel properties (Alternatively, Server Settings, Webhooks works too)
+      - Click **Webhooks**
+      - Click **Create Webhook**
+      - Type in a name (this is for local reference, it's overriden by the incoming hook data)
+      - Copy the **Webhook URL** (you can use the Copy button)
+      - Click **Save**
+
+   5.2 In *server.js*, set the 'WebHook URL' in `DISCORD_WEBHOOK_URL = 'https://discordapp.com/api/webhooks/xxxxxxxxxxxxxxxxxxxx/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';`
+
+6. **SendGrid** Email Integration
+
+    6.1 Create a [SendGrid Free Account](https://sendgrid.com/pricing/)
     
-    5.2 Create and get an [API KEY with Full Access](https://app.sendgrid.com/settings/api_keys)
+    6.2 Create and get an [API KEY with Full Access](https://app.sendgrid.com/settings/api_keys)
     
-    5.3 In *server.js*, set the *'API KEYS'* in `SENDGRID_APY_KEY = 'AA.AAAA_AAAAAAAAAAAAA.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';`
+    6.3 In *server.js*, set the *'API KEYS'* in `SENDGRID_APY_KEY = 'AA.AAAA_AAAAAAAAAAAAA.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';`
      
-    5.4 In *server.js*, set the sender email in the *emailFrom* variable. Code: `emailFrom = "aaa@aaa.com";`
+    6.4 In *server.js*, set the sender email in the *emailFrom* variable. Code: `emailFrom = "aaa@aaa.com";`
     
       Now, to avoid falling into the "SPAM" folder there are two options:
 
@@ -84,7 +99,7 @@ The App request the `urlToCheck` every `checkingFrequency` and if any of the `el
      
       b) Put any email address in the `emailFrom` variable and add it to the *white list* in the receiver email client.
          
-    5.5 In *server.js*, set the *emailsToAlert* array. Code: `emailsToAlert = ["emailOneToSend@theAlert.com", "emailTwoToSend@theAlert.com"];` 
+    6.5 In *server.js*, set the *emailsToAlert* array. Code: `emailsToAlert = ["emailOneToSend@theAlert.com", "emailTwoToSend@theAlert.com"];` 
 
 <br /> 
 
