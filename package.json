@@ -13,7 +13,8 @@
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "request": "^2.88.0",
-    "slack-notify": "^0.1.7"
+    "slack-notify": "^0.1.7",
+    "discord-webhook-node": "^1.1.8"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"

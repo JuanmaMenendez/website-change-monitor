@@ -19,6 +19,11 @@ const checkingFrequency = 5 * 60000; //first number represent the checkingFreque
 const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX';
 const slack = require('slack-notify')(SLACK_WEBHOOK_URL);
 
+//Discord Integration
+const DISCORD_WEBHOOK_URL = 'https://discordapp.com/api/webhooks/xxxxxxxxxxxxxxxxxxxx/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+const {Webhook} = require('discord-webhook-node');
+const discord = new Webhook(DISCORD_WEBHOOK_URL);
+
 //SendGrid Email Integration
 const SENDGRID_APY_KEY = 'AA.AAAA_AAAAAAAAAAAAA.AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
 const sgMail = require('@sendgrid/mail');
@@ -58,6 +63,11 @@ const intervalId = setInterval(function () {
                             console.log('Message received in slack!');
                         }
                     });
+
+                    // Discord Information Message
+                    discord.info(`**Alert**`, `Change Detected!`, `🔥🔥🔥 Change detected in ${urlToCheck} 🔥🔥🔥 `)
+                    .then(() => console.log('Message received in Discord!'))
+                    .catch(err => console.log(`Discord API error: ${err.message}`));
 
                     // Email Alert Notification
                     const msg = {
