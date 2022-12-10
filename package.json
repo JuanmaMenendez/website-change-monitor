@@ -11,7 +11,7 @@
     "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
     "ejs": "^2.6.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "request": "^2.88.0",
     "slack-notify": "^0.1.7"
   },
